@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-fakephoto",
+  "version": "0.0.1",
+  "description": "Cordova FakePhoto Plugin",
+  "cordova": {
+    "id": "cordova-plugin-fakephoto",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "fakephoto",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "keyong",
+  "license": "Apache 2.0"
+}

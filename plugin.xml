@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-fakephoto" version="0.0.1">
+    <name>FakePhoto</name>
+    <description>Cordova FakePhoto Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, fakephoto</keywords>
+    <js-module src="www/fakephoto.js" name="Fakephoto">
+        <clobbers target="NP" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FakePhoto">
+                <param name="android-package" value="com.accenture.np.plugin.FakePhotoPlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+        </config-file>
+        <source-file src="src/android/FakePhotoPlugin.java" target-dir="src/com/accenture/np/plugin" />
+        <framework src="src/android/plugin_setting.gradle" custom="true" type="gradleReference" />
+        <!--resourc-file src="android_libs/NativeFakePhoto.aar" target="libs/NativeFakePhoto.aar" /-->
+        <lib-file src="android_libs/NativeFakePhoto.aar"/>
+    </platform>
+</plugin>
