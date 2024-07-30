@@ -22,4 +22,17 @@
         <!--resourc-file src="android_libs/NativeFakePhoto.aar" target="libs/NativeFakePhoto.aar" /-->
         <lib-file src="android_libs/NativeFakePhoto.aar"/>
     </platform>
+   <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FakePhoto">
+                <param name="ios-package" value="FakePhotoPlugin"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/FakePhotoPlugin.h" />
+        <source-file src="src/ios/FakePhotoPlugin.mm" />
+        <!-- <resource-file src="src/ios/NPFakePhoto.bundle" target="NPFakePhoto.bundle" /> -->
+        <framework src="ios_framework/fakephoto.xcframework" custom="true" />
+    </platform>
 </plugin>

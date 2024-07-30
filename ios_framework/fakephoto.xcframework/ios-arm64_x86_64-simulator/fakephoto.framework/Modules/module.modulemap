@@ -1,0 +1,6 @@
+framework module fakephoto {
+  umbrella header "fakephoto.h"
+  export *
+
+  module * { export * }
+}
